@@ -6,3 +6,7 @@
   left: 0;
   right: 0;
 }
+
+.test {
+  position: absolute;
+}

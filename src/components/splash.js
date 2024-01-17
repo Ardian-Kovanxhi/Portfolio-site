@@ -11,7 +11,7 @@ export default function ComponentTest() {
             <div className='testDiv'>
                 <img
                     src={NameImg} />
-                <div>
+                {/* <div>
                     <img
                         style={{ width: '50px', height: '50px' }}
                         src={logImg} />
@@ -24,7 +24,7 @@ export default function ComponentTest() {
                     <img
                         style={{ width: '50px', height: '50px' }}
                         src={houseImg} />
-                </div>
+                </div> */}
                 <div className='disclaimer'>
                     This site is heavily inspired by TheStrokes.com
                 </div>

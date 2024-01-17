@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import moment from 'moment-timezone'; // or import { format } from 'date-fns-tz';
+import moment from 'moment-timezone';
 import './clock.css'
 
 export default function Clock() {
@@ -16,11 +16,11 @@ export default function Clock() {
 
     return (
         <div className='topBar'>
-            <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '20px' }}>
+            {/* <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '20px' }}>
                 Corporate
-                <div>|slider|</div>
+                <button>|slider|</button>
                 Personal
-            </div>
+            </div> */}
             <div className='clock'>
                 {currentTime.format('HH:mm')}
             </div>
