@@ -1,4 +1,4 @@
-import './icon.css'
+import './Icon.scss'
 export default function AppIcon({ name, iconImage }) {
     return (
         <div

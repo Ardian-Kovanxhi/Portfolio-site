@@ -7,10 +7,10 @@
     position: absolute;
     top: 0;
     font: "times", sans-serif;
-}
 
-.icon-div:hover {
-    cursor: pointer;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .icon-img {

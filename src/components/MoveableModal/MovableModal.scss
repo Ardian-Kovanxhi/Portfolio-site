@@ -1,0 +1,36 @@
+@import '../style_imports/fonts';
+
+.movable-modal {
+    position: absolute;
+    border: 1px solid rgb(204, 204, 204);
+    background-color: rgb(255, 255, 255);
+    z-index: 1000;
+    width: 1000px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header {
+    background-color: #f1f1f1;
+    cursor: move;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.modal-content {
+    height: 500px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+}
+
+.invisible {
+    display: none;
+}

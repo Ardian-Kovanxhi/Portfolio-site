@@ -3,9 +3,9 @@ import roboImg from '../images/robot.png'
 import discordImg from '../images/discord.png'
 import houseImg from '../images/house.webp'
 import NameImg from '../images/name.png'
-import './testStyle.css'
+import './SplashStyle.scss'
 
-export default function ComponentTest() {
+export default function MainPage() {
     return (
         <>
             <div className='testDiv'>
