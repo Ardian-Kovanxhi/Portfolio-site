@@ -3,13 +3,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50px;
+    width: 75px;
+    padding: 10px 0px;
+    height: 55px;
     position: absolute;
     top: 0;
     font: "times", sans-serif;
 
     &:hover {
         cursor: pointer;
+        background-color: rgba($color: #FFFFFF, $alpha: .3);
     }
 }
 
@@ -22,6 +25,10 @@
 .icon-name {
     font-size: small;
     color: white;
+    width: 50px;
+    text-overflow: clip;
+    display: flex;
+    justify-content: center;
 }
 
 .Soundlog {
@@ -39,7 +46,7 @@
     margin-left: 100px;
 }
 
-.AI_Chatbot {
+.AI.Chatbot {
     margin-top: 400px;
     margin-left: 100px;
 }
@@ -49,7 +56,7 @@
     margin-left: 100px;
 }
 
-.About_metxt {
+.About.metxt {
     margin-top: 600px;
     margin-left: 100px;
 }

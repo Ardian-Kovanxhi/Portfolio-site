@@ -36,8 +36,8 @@ function App() {
     <>
 
       <ModularModal modalComponent={<Resume />} modalHeader={'Resume.txt'} modalId={'resumeId'} />
-      <ModularModal modalComponent={<AboutMe />} modalHeader={'About_me.txt'} modalId={'aboutMeId'} />
-      <ModularModal modalComponent={<AiChatbot />} modalHeader={'AI_Chatbot'} modalId={'aiId'} />
+      <ModularModal modalComponent={<AboutMe />} modalHeader={'About me.txt'} modalId={'aboutMeId'} />
+      <ModularModal modalComponent={<AiChatbot />} modalHeader={'AI Chatbot'} modalId={'aiId'} />
       <ModularModal modalComponent={<ArdianBnB />} modalHeader={'ArdianBnB'} modalId={'ardianBnBId'} />
       <ModularModal modalComponent={<Discordance />} modalHeader={'Discordance'} modalId={'discordId'} />
       <ModularModal modalComponent={<Soundlog />} modalHeader={'Soundlog'} modalId={'soundlogId'} />
@@ -67,7 +67,7 @@ function App() {
         <div
           onClick={() => openModal('aiId')}
         >
-          <AppIcon name={'AI_Chatbot'} iconImage={robotImg} />
+          <AppIcon name={'AI Chatbot'} iconImage={robotImg} />
         </div>
 
         <div
@@ -78,7 +78,7 @@ function App() {
         <div
           onClick={() => openModal('aboutMeId')}
         >
-          <AppIcon name={'About_me.txt'} iconImage={textImg} />
+          <AppIcon name={'About me.txt'} iconImage={textImg} />
         </div>
 
         <div onClick={() => window.open('https://www.linkedin.com/in/ardian-kovanxhi-341177145/', '_blank')}>
