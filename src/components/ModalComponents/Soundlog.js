@@ -1,16 +1,17 @@
-import logImg from '../../images/log.png'
+import forestImg from '../../images/small-forest.jpg'
+// import forestImg from '../../images/bright-clearing.png'
 
 export default function Soundlog() {
+    //onClick={() => window.open('https://ardian-kovanxhi-soundcloud.onrender.com', '_blank')}
     return (
         <>
-            SOUNDLOG COMPONENT
             <img
-                src={logImg}
-                onClick={() => window.open('https://ardian-kovanxhi-soundcloud.onrender.com', '_blank')}
+                src={forestImg}
                 style={{
-                    width: '50px',
-                    height: '50px'
+                    width: '100%',
+                    height: '100%'
                 }}
+                alt=''
             />
         </>
     )

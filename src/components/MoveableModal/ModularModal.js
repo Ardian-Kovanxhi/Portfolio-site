@@ -1,21 +1,20 @@
-import { useEffect, useState } from "react"
 import { useModal } from "../../context/ModalContext"
 import MovableModal from "./MovableModal"
-import Resume from "../ModalComponents/Resume"
 import './MovableModal.scss'
 
-export default function ModularModal({ modalComponent, modalHeader, modalId }) {
+export default function ModularModal({ modalComponent, modalHeader, modalId, position }) {
 
-    const { modals, openModal, closeModal } = useModal();
+    const { modals, closeModal } = useModal();
     const modalOpen = modals.includes(modalId);
 
     const handleCloseModal = () => {
         closeModal(modalId);
     };
 
+
     return (
         <div className={`displayTest${modalOpen ? '' : ' invisible'}`}>
-            <MovableModal header={modalHeader} onClose={handleCloseModal}>
+            <MovableModal header={modalHeader} onClose={handleCloseModal} position={position}>
                 {modalComponent}
             </MovableModal>
         </div>

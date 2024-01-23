@@ -1,12 +1,14 @@
 import './Icon.scss'
-export default function AppIcon({ name, iconImage }) {
+export default function AppIcon({ name, iconImage, style }) {
     return (
         <div
-            className={`icon-div ${name.split('.').join('')}`}
+            className="icon-div"
+            style={style}
         >
             <img
                 className='icon-img'
                 src={iconImage}
+                alt=''
             />
             {name.split(' ').map(el => (
                 <div className='icon-name'>

@@ -7,14 +7,13 @@
   bottom: 0;
   left: 0;
   right: 0;
-  // overflow-y: hidden;
 }
 
 body {
-  overflow-y: hidden;
-}
+  overflow: hidden;
 
-body * {
-  font-family: var(--nextTest-font);
-  font-size: large;
+  & * {
+    font-family: var(--nextTest-font);
+    font-size: large;
+  }
 }
