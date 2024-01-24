@@ -18,6 +18,7 @@ export default function AiChatbot() {
                     width: '150%',
                     height: '100%'
                 }}
+                alt=''
             />
             <div
                 style={{
@@ -38,6 +39,7 @@ export default function AiChatbot() {
                     bottom: 0,
                     marginBottom: '140px'
                 }}
+                alt=''
             />
         </div>
     )

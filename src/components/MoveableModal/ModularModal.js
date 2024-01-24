@@ -13,7 +13,7 @@ export default function ModularModal({ modalComponent, modalHeader, modalId, pos
 
 
     return (
-        <div className={`displayTest${modalOpen ? '' : ' invisible'}`}>
+        <div className={`${modalOpen ? '' : 'invisible'}`}>
             <MovableModal header={modalHeader} onClose={handleCloseModal} position={position}>
                 {modalComponent}
             </MovableModal>

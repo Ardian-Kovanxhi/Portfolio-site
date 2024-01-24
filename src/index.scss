@@ -7,13 +7,14 @@
   bottom: 0;
   left: 0;
   right: 0;
+  overflow: hidden;
 }
 
 body {
   overflow: hidden;
 
   & * {
-    font-family: var(--nextTest-font);
+    font-family: var(--main-font);
     font-size: large;
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import MainPage from './components/Splash';
-import Clock from './components/clock/Clock';
+// import Clock from './components/clock/Clock';
 
 import AppIcon from './components/Icons/Icon';
 import logImg from './images/log.png'
@@ -77,7 +77,7 @@ function App() {
       />
 
       <div className="App">
-        <Clock />
+        {/* <Clock /> */}
         <MainPage />
 
         <div
