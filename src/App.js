@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import MainPage from './components/Splash';
 // import Clock from './components/clock/Clock';
 
@@ -24,64 +24,99 @@ import Soundlog from './components/ModalComponents/Soundlog';
 
 function App() {
 
-
-  const { openModal } = useModal()
+  const { openModal, focus, handleFocus } = useModal()
 
   const openEmailApp = () => {
     window.location.href = 'mailto:akovanxhi@gmail.com';
   };
 
+  // const [focus, setFocus] = useState(null)
+
+
+
   return (
     <>
 
-      <ModularModal
-        modalComponent={<Resume />}
-        modalHeader={'Resume.txt'}
-        modalId={'resumeId'}
-        position={{ x: 1000, y: 100 }}
-      />
+      <div onMouseDown={() => handleFocus('resumeId')}>
+        <ModularModal
+          modalComponent={<Resume />}
+          modalHeader={'Resume.txt'}
+          modalId={'resumeId'}
+          position={{ left: '65vw', top: '6vh' }}
+          focus={focus}
+          setFocus={handleFocus}
+        />
+      </div>
 
-      <ModularModal
-        modalComponent={<AboutMe />}
-        modalHeader={'About me.txt'}
-        modalId={'aboutMeId'}
-        position={{ x: 1000, y: 200 }}
-      />
 
-      <ModularModal
-        modalComponent={<AiChatbot />}
-        modalHeader={'AI Chatbot'}
-        modalId={'aiId'}
-        position={{ x: 1000, y: 300 }}
-      />
+      <div onMouseDown={() => handleFocus('aboutMeId')}>
+        <ModularModal
+          modalComponent={<AboutMe />}
+          modalHeader={'About me.txt'}
+          modalId={'aboutMeId'}
+          position={{ left: '30vw', top: '20vh' }}
+          focus={focus}
+          setFocus={handleFocus}
+        />
+      </div>
 
-      <ModularModal
-        modalComponent={<ArdianBnB />}
-        modalHeader={'ArdianBnB'}
-        modalId={'ardianBnBId'}
-        position={{ x: 1000, y: 400 }}
-      />
 
-      <ModularModal
-        modalComponent={<Discordance />}
-        modalHeader={'Discordance'}
-        modalId={'discordId'}
-        position={{ x: 1000, y: 500 }}
-      />
+      <div onMouseDown={() => handleFocus('aiId')}>
+        <ModularModal
+          modalComponent={<AiChatbot />}
+          modalHeader={'AI Chatbot'}
+          modalId={'aiId'}
+          position={{ left: '1000px', top: '300px' }}
+          focus={focus}
+          setFocus={handleFocus}
+        />
+      </div>
 
-      <ModularModal
-        modalComponent={<Soundlog />}
-        modalHeader={'Soundlog'}
-        modalId={'soundlogId'}
-        position={{ x: 1000, y: 600 }}
-      />
+
+      <div onMouseDown={() => handleFocus('ardianBnBId')}>
+        <ModularModal
+          modalComponent={<ArdianBnB />}
+          modalHeader={'ArdianBnB'}
+          modalId={'ardianBnBId'}
+          position={{ left: '1000px', top: '400px' }}
+          focus={focus}
+          setFocus={handleFocus}
+        />
+      </div>
+
+
+      <div onMouseDown={() => handleFocus('discordId')}>
+        <ModularModal
+          modalComponent={<Discordance />}
+          modalHeader={'Discordance'}
+          modalId={'discordId'}
+          position={{ left: '1000px', top: '500px' }}
+          focus={focus}
+          setFocus={handleFocus}
+        />
+      </div>
+
+
+      <div onMouseDown={() => handleFocus('soundlogId')}>
+        <ModularModal
+          modalComponent={<Soundlog />}
+          modalHeader={'Soundlog'}
+          modalId={'soundlogId'}
+          position={{ left: '50vw', top: '30vh' }}
+          focus={focus}
+          setFocus={handleFocus}
+        />
+      </div>
 
       <div className="App">
         {/* <Clock /> */}
         <MainPage />
 
         <div
-          onClick={() => openModal('soundlogId')}
+          onClick={() => {
+            openModal('soundlogId')
+            handleFocus('soundlogId')
+          }}
         >
           <AppIcon
             name={'Soundlog'}
@@ -95,7 +130,10 @@ function App() {
         </div>
 
         <div
-          onClick={() => openModal('discordId')}
+          onClick={() => {
+            openModal('discordId')
+            handleFocus('discordId')
+          }}
         >
           <AppIcon
             name={'Discordance'}
@@ -109,7 +147,10 @@ function App() {
         </div>
 
         <div
-          onClick={() => openModal('ardianBnBId')}
+          onClick={() => {
+            openModal('ardianBnBId')
+            handleFocus('ardianBnBId')
+          }}
         >
           <AppIcon
             name={'ArdianBnB'}
@@ -123,7 +164,10 @@ function App() {
         </div>
 
         <div
-          onClick={() => openModal('aiId')}
+          onClick={() => {
+            openModal('aiId')
+            handleFocus('aiId')
+          }}
         >
           <AppIcon
             name={'AI Chatbot'}
@@ -137,7 +181,10 @@ function App() {
         </div>
 
         <div
-          onClick={() => openModal('resumeId')}
+          onClick={() => {
+            openModal('resumeId')
+            handleFocus('resumeId')
+          }}
         >
           <AppIcon
             name={'Resume.txt'}
@@ -150,7 +197,10 @@ function App() {
           />
         </div>
         <div
-          onClick={() => openModal('aboutMeId')}
+          onClick={() => {
+            openModal('aboutMeId')
+            handleFocus('aboutMeId')
+          }}
         >
           <AppIcon
             name={'About me.txt'}

@@ -2,7 +2,7 @@ import { useModal } from "../../context/ModalContext"
 import MovableModal from "./MovableModal"
 import './MovableModal.scss'
 
-export default function ModularModal({ modalComponent, modalHeader, modalId, position }) {
+export default function ModularModal({ modalComponent, modalHeader, modalId, position, focus }) {
 
     const { modals, closeModal } = useModal();
     const modalOpen = modals.includes(modalId);
@@ -14,7 +14,12 @@ export default function ModularModal({ modalComponent, modalHeader, modalId, pos
 
     return (
         <div className={`${modalOpen ? '' : 'invisible'}`}>
-            <MovableModal header={modalHeader} onClose={handleCloseModal} position={position}>
+            <MovableModal
+                header={modalHeader}
+                onClose={handleCloseModal}
+                position={position}
+                focus={focus === modalId}
+            >
                 {modalComponent}
             </MovableModal>
         </div>

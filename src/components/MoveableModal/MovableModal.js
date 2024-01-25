@@ -5,11 +5,11 @@ import closeBtnHover from '../../images/hoverClose.png'
 import { useModal } from '../../context/ModalContext';
 import './MovableModal.scss';
 
-export default function MovableModal({ header, onClose, children, position }) {
+export default function MovableModal({ header, onClose, children, position, focus }) {
 
     const [hovered, setHovered] = useState(false)
 
-    const { openModal, closeModal } = useModal()
+    const { openModal, closeModal, handleFocus } = useModal()
 
 
     const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 430);
@@ -45,7 +45,7 @@ export default function MovableModal({ header, onClose, children, position }) {
         <>
             {
                 isSmallScreen ?
-                    <div className="movable-modal" >
+                    <div className="movable-modal">
                         <div className="modal-header">
                             <div className='title-x-div'>
                                 <div className='title-bar' >
@@ -60,10 +60,12 @@ export default function MovableModal({ header, onClose, children, position }) {
                                     <img
                                         className='close-btn-hover'
                                         src={closeBtnHover}
+                                        alt=''
                                     />
                                     <img
                                         className={`close-btn ${hovered ? 'invisible' : ''}`}
                                         src={closeBtn}
+                                        alt=''
                                     />
                                 </span>
                             </div>
@@ -71,11 +73,12 @@ export default function MovableModal({ header, onClose, children, position }) {
                             <div className='name-tab-div'>
                                 {
 
-                                    Object.keys(nameObj).map(name => {
+                                    Object.keys(nameObj).map((name, index) => {
                                         return (
                                             <div
                                                 className={`name-tab${name === header ? ' match' : ''}`}
                                                 onClick={() => handleClick(name)}
+                                                key={`tab${index}`}
                                             >
                                                 {name}
                                             </div>
@@ -87,11 +90,12 @@ export default function MovableModal({ header, onClose, children, position }) {
                         <div className="modal-content">{children}</div>
                     </div >
                     :
-                    <Draggable
-                        handle=".modal-header"
-                        defaultPosition={position}
-                    >
-                        <div className="movable-modal" >
+                    <Draggable handle=".modal-header" >
+                        <div
+                            className="movable-modal"
+                            style={focus ? { ...position, zIndex: 1001 } : { ...position, zIndex: 1000 }}
+                        // style={position}
+                        >
                             <div className="modal-header">
                                 <div className='title-x-div'>
                                     <div className='title-bar' >
@@ -106,24 +110,28 @@ export default function MovableModal({ header, onClose, children, position }) {
                                         <img
                                             className='close-btn-hover'
                                             src={closeBtnHover}
+                                            alt=''
                                         />
                                         <img
                                             className={`close-btn ${hovered ? 'invisible' : ''}`}
                                             src={closeBtn}
+                                            alt=''
                                         />
                                     </span>
                                 </div>
                                 <div className='name-tab-div'>
                                     {
 
-                                        Object.keys(nameObj).map(name => {
+                                        Object.keys(nameObj).map((name, index) => {
                                             return (
                                                 <div
                                                     className={`name-tab${name === header ? ' match' : ''}`}
                                                     onClick={() => {
                                                         if (name === header) return;
                                                         openModal(nameObj[name])
+                                                        handleFocus(nameObj[name])
                                                     }}
+                                                    key={`tab${index}`}
                                                 >
                                                     {name}
                                                 </div>
@@ -139,97 +147,3 @@ export default function MovableModal({ header, onClose, children, position }) {
         </>
     );
 };
-
-// import React, { useEffect, useState } from 'react';
-// import Draggable from 'react-draggable';
-// import closeBtn from '../../images/defaultClose.png';
-// import closeBtnHover from '../../images/hoverClose.png';
-// import './MovableModal.scss';
-// import { useModal } from '../../context/ModalContext';
-
-// export default function MovableModal({ header, onClose, children, position }) {
-//     const [hovered, setHovered] = useState(false);
-//     const { openModal } = useModal();
-//     const [isDraggable, setIsDraggable] = useState(true);
-
-//     useEffect(() => {
-//         const handleResize = () => {
-//             setIsDraggable(window.innerWidth > 430);
-//         };
-
-//         // Attach the event listener for window resize
-//         window.addEventListener('resize', handleResize);
-
-//         // Initial check on mount
-//         handleResize();
-
-//         // Cleanup the event listener on component unmount
-//         return () => {
-//             window.removeEventListener('resize', handleResize);
-//         };
-//     }, []);
-
-//     const nameArr = {
-//         'Resume.txt': 'resumeId',
-//         'About me.txt': 'aboutMeId',
-//         'Soundlog': 'soundlogId',
-//         'AI Chatbot': 'aiId',
-//         'Discordance': 'discordId',
-//         'ArdianBnB': 'ardianBnBId'
-//     };
-
-//     const centerPosition = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
-
-//     return (
-//         <>
-//             {isDraggable ? (
-//                 <Draggable
-//                     handle=".modal-header"
-//                     defaultPosition={position || centerPosition}
-//                 >
-//                     <div className="movable-modal">
-//                         <div className="modal-header">
-//                             <div className='title-x-div'>
-//                                 <div className='title-bar'>{header}</div>
-//                                 <span
-//                                     className="close"
-//                                     onClick={onClose}
-//                                     onMouseEnter={() => setHovered(true)}
-//                                     onMouseLeave={() => setHovered(false)}
-//                                 >
-//                                     <img className='close-btn-hover' src={closeBtnHover} alt="Close Hover" />
-//                                     <img className={`close-btn ${hovered ? 'invisible' : ''}`} src={closeBtn} alt="Close" />
-//                                 </span>
-//                             </div>
-//                             <div className='name-tab-div'>
-//                                 {Object.keys(nameArr).map(name => (
-//                                     <div
-//                                         key={name}
-//                                         className={`name-tab${name === header ? ' match' : ''}`}
-//                                         onClick={() => {
-//                                             if (name === header) return;
-//                                             openModal(nameArr[name]);
-//                                         }}
-//                                     >
-//                                         {name}
-//                                     </div>
-//                                 ))}
-//                             </div>
-//                         </div>
-//                         <div className="modal-content">{children}</div>
-//                     </div>
-//                 </Draggable>
-//             ) : (
-//                 <div className="movable-modal">
-//                     <div className="modal-header">
-//                         <div>{header}</div>
-//                         <span className="close" onClick={onClose}>
-//                             &times;
-//                         </span>
-//                     </div>
-//                     <div className="modal-content">{children}</div>
-//                 </div>
-//             )}
-//         </>
-//     );
-// }

@@ -10,8 +10,11 @@ export default function AppIcon({ name, iconImage, style }) {
                 src={iconImage}
                 alt=''
             />
-            {name.split(' ').map(el => (
-                <div className='icon-name'>
+            {name.split(' ').map((el, index) => (
+                <div
+                    className='icon-name'
+                    key={`name-part${index}`}
+                >
                     {el}
                 </div>
             ))}

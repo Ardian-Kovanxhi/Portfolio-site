@@ -9,6 +9,8 @@ import name4 from '../images/nameLoop/nameLoop4.png'
 import name5 from '../images/nameLoop/nameLoop5.png'
 import name6 from '../images/nameLoop/nameLoop6.png'
 import name7 from '../images/nameLoop/nameLoop7.png'
+import name8 from '../images/nameLoop/nameLoop8.png'
+import name9 from '../images/nameLoop/nameLoop9.png'
 
 import './SplashStyle.scss'
 
@@ -16,15 +18,14 @@ export default function MainPage() {
 
     const [name, setName] = useState(NameImg)
 
-    const nameArr = [name1, name2, name3, name4, name5, name6, name7, NameImg];
+    const nameArr = [name1, name2, name3, name4, name5, name6, name7, name8, name9, NameImg];
 
     const clickHandler = () => {
-        for (let i = 0; i < nameArr.length; i++) {
-            (function (index) {
-                setTimeout(() => {
-                    setName(nameArr[i])
-                }, 160 * index);
-            })(i);
+        for (let i = 0; i <= nameArr.length; i++) {
+            setTimeout(() => {
+                if (i === nameArr.length) setName(nameArr[Math.floor(Math.random() * 10)])
+                else setName(nameArr[i])
+            }, 120 * i);
         }
     }
 
@@ -43,23 +44,37 @@ export default function MainPage() {
         <>
             <div className='topBar'>
                 <button
+                    className='cycle-btn'
+                    onClick={clickHandler}
+                >
+                    Ardian Kovanxhi
+                </button>
 
-                >CYCLE</button>
-                <div>{'Wlcome to my retro site :]'}</div>
+                {/* <div>{'Wlcome to my retro site :]'}</div> */}
                 <div className='clock'>
                     {currentTime.format('HH:mm')}
                 </div>
             </div>
             <div className='splash-div'>
                 <img
-                    onClick={clickHandler}
                     className='name-img'
-                    // src={NameImg}
                     src={name}
                     alt=''
                 />
                 <div className='disclaimer'>
-                    This site is heavily inspired by TheStrokes.com
+                    {'This site is heavily inspired by '}
+
+                    <a
+                        style={{
+                            color: 'white',
+                            textDecoration: 'underline'
+                        }}
+                        href='https://www.thestrokes.com/#'
+                        target='_blank'
+                        rel='noreferrer'
+                    >
+                        TheStrokes.com
+                    </a>
                 </div>
             </div>
         </>

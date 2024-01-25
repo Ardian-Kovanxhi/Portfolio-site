@@ -5,6 +5,12 @@ const ModalContext = createContext();
 export const ModalProvider = ({ children }) => {
     const [modals, setModals] = useState([]);
 
+    const [focus, setFocus] = useState(null)
+
+    const handleFocus = (modalId) => {
+        setFocus(modalId)
+    }
+
     const openModal = (modalId) => {
         setModals((prevModals) => [...prevModals, modalId]);
     };
@@ -14,7 +20,7 @@ export const ModalProvider = ({ children }) => {
     };
 
     return (
-        <ModalContext.Provider value={{ modals, openModal, closeModal }}>
+        <ModalContext.Provider value={{ modals, openModal, closeModal, focus, handleFocus }}>
             {children}
         </ModalContext.Provider>
     );
