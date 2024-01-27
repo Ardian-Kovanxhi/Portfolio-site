@@ -9,7 +9,7 @@ export default function MovableModal({ header, onClose, children, position, focu
 
     const [hovered, setHovered] = useState(false)
 
-    const { openModal, closeModal, handleFocus } = useModal()
+    const { openModal, closeModal, setFocus } = useModal()
 
 
     const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 430);
@@ -129,7 +129,7 @@ export default function MovableModal({ header, onClose, children, position, focu
                                                     onClick={() => {
                                                         if (name === header) return;
                                                         openModal(nameObj[name])
-                                                        handleFocus(nameObj[name])
+                                                        setFocus(nameObj[name])
                                                     }}
                                                     key={`tab${index}`}
                                                 >

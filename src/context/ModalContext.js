@@ -7,10 +7,6 @@ export const ModalProvider = ({ children }) => {
 
     const [focus, setFocus] = useState(null)
 
-    const handleFocus = (modalId) => {
-        setFocus(modalId)
-    }
-
     const openModal = (modalId) => {
         setModals((prevModals) => [...prevModals, modalId]);
     };
@@ -20,7 +16,7 @@ export const ModalProvider = ({ children }) => {
     };
 
     return (
-        <ModalContext.Provider value={{ modals, openModal, closeModal, focus, handleFocus }}>
+        <ModalContext.Provider value={{ modals, openModal, closeModal, focus, setFocus }}>
             {children}
         </ModalContext.Provider>
     );

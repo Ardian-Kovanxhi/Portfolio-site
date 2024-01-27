@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import MainPage from './components/Splash';
 // import Clock from './components/clock/Clock';
 
@@ -24,7 +24,7 @@ import Soundlog from './components/ModalComponents/Soundlog';
 
 function App() {
 
-  const { openModal, focus, handleFocus } = useModal()
+  const { openModal, focus, setFocus } = useModal()
 
   const openEmailApp = () => {
     window.location.href = 'mailto:akovanxhi@gmail.com';
@@ -37,74 +37,74 @@ function App() {
   return (
     <>
 
-      <div onMouseDown={() => handleFocus('resumeId')}>
+      <div onMouseDown={() => setFocus('resumeId')}>
         <ModularModal
           modalComponent={<Resume />}
           modalHeader={'Resume.txt'}
           modalId={'resumeId'}
-          position={{ left: '65vw', top: '6vh' }}
+          position={{ left: '60vw', top: '6vh' }}
           focus={focus}
-          setFocus={handleFocus}
+          setFocus={setFocus}
         />
       </div>
 
 
-      <div onMouseDown={() => handleFocus('aboutMeId')}>
+      <div onMouseDown={() => setFocus('aboutMeId')}>
         <ModularModal
           modalComponent={<AboutMe />}
           modalHeader={'About me.txt'}
           modalId={'aboutMeId'}
-          position={{ left: '30vw', top: '20vh' }}
+          position={{ left: '35vw', top: '12vh' }}
           focus={focus}
-          setFocus={handleFocus}
+          setFocus={setFocus}
         />
       </div>
 
 
-      <div onMouseDown={() => handleFocus('aiId')}>
+      <div onMouseDown={() => setFocus('aiId')}>
         <ModularModal
           modalComponent={<AiChatbot />}
           modalHeader={'AI Chatbot'}
           modalId={'aiId'}
-          position={{ left: '1000px', top: '300px' }}
+          position={{ left: '10vw', top: '10vh' }}
           focus={focus}
-          setFocus={handleFocus}
+          setFocus={setFocus}
         />
       </div>
 
 
-      <div onMouseDown={() => handleFocus('ardianBnBId')}>
+      <div onMouseDown={() => setFocus('ardianBnBId')}>
         <ModularModal
           modalComponent={<ArdianBnB />}
           modalHeader={'ArdianBnB'}
           modalId={'ardianBnBId'}
-          position={{ left: '1000px', top: '400px' }}
+          position={{ left: '5vw', top: '20vh' }}
           focus={focus}
-          setFocus={handleFocus}
+          setFocus={setFocus}
         />
       </div>
 
 
-      <div onMouseDown={() => handleFocus('discordId')}>
+      <div onMouseDown={() => setFocus('discordId')}>
         <ModularModal
           modalComponent={<Discordance />}
           modalHeader={'Discordance'}
           modalId={'discordId'}
-          position={{ left: '1000px', top: '500px' }}
+          position={{ left: '30vw', top: '30vh' }}
           focus={focus}
-          setFocus={handleFocus}
+          setFocus={setFocus}
         />
       </div>
 
 
-      <div onMouseDown={() => handleFocus('soundlogId')}>
+      <div onMouseDown={() => setFocus('soundlogId')}>
         <ModularModal
           modalComponent={<Soundlog />}
           modalHeader={'Soundlog'}
           modalId={'soundlogId'}
-          position={{ left: '50vw', top: '30vh' }}
+          position={{ left: '50vw', top: '25vh' }}
           focus={focus}
-          setFocus={handleFocus}
+          setFocus={setFocus}
         />
       </div>
 
@@ -115,7 +115,7 @@ function App() {
         <div
           onClick={() => {
             openModal('soundlogId')
-            handleFocus('soundlogId')
+            setFocus('soundlogId')
           }}
         >
           <AppIcon
@@ -132,7 +132,7 @@ function App() {
         <div
           onClick={() => {
             openModal('discordId')
-            handleFocus('discordId')
+            setFocus('discordId')
           }}
         >
           <AppIcon
@@ -149,7 +149,7 @@ function App() {
         <div
           onClick={() => {
             openModal('ardianBnBId')
-            handleFocus('ardianBnBId')
+            setFocus('ardianBnBId')
           }}
         >
           <AppIcon
@@ -166,7 +166,7 @@ function App() {
         <div
           onClick={() => {
             openModal('aiId')
-            handleFocus('aiId')
+            setFocus('aiId')
           }}
         >
           <AppIcon
@@ -183,7 +183,7 @@ function App() {
         <div
           onClick={() => {
             openModal('resumeId')
-            handleFocus('resumeId')
+            setFocus('resumeId')
           }}
         >
           <AppIcon
@@ -199,7 +199,7 @@ function App() {
         <div
           onClick={() => {
             openModal('aboutMeId')
-            handleFocus('aboutMeId')
+            setFocus('aboutMeId')
           }}
         >
           <AppIcon
