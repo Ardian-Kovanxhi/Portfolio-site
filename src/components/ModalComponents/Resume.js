@@ -1,6 +1,9 @@
 export default function Resume() {
     return (
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <div
+            className="resume-container"
+            style={{ display: 'flex', flexDirection: 'column' }}
+        >
 
             <div style={{ display: 'flex', flexDirection: 'column' }}>
                 <div>

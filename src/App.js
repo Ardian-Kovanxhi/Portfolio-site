@@ -191,8 +191,8 @@ function App() {
             iconImage={textImg}
             style={{
               position: 'absolute',
-              top: '10vh',
-              left: '5vw'
+              top: '45vh',
+              left: '10vw'
             }}
           />
         </div>
@@ -207,8 +207,8 @@ function App() {
             iconImage={textImg}
             style={{
               position: 'absolute',
-              top: '50vh',
-              left: '10vw'
+              top: '10vh',
+              left: '5vw'
             }}
           />
         </div>

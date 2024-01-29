@@ -27,6 +27,8 @@
     border-bottom: 1px black solid;
     border-left: 1px white solid;
 
+    font-family: var(--main-font);
+
     &:hover {
         cursor: pointer;
     }

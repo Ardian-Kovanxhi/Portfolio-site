@@ -16,7 +16,7 @@ export default function Soundlog() {
                 overflow: 'hidden'
             }}
         >
-            <div className='forest-blurb-container'>
+            <div className='forest blurb-container'>
                 <div>
                     Inspired by Soundcloud, Soundlog is a music playing website with functionality in mind where users can play, upload, like, and comment on their favorite songs
                 </div>

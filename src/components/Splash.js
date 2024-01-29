@@ -40,6 +40,22 @@ export default function MainPage() {
         return () => clearInterval(interval);
     }, [userTimeZone]);
 
+
+    useEffect(() => {
+        const handleContextMenu = (event) => {
+            if (event.target.classList.contains('name-img')) {
+                event.preventDefault();
+            }
+        };
+
+        document.addEventListener('contextmenu', handleContextMenu);
+
+        return () => {
+            document.removeEventListener('contextmenu', handleContextMenu);
+        };
+    }, []);
+
+
     return (
         <>
             <div className='topBar'>
