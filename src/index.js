@@ -4,13 +4,16 @@ import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ModalProvider } from './context/ModalContext';
+import { PageProvider } from './context/PageContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ModalProvider>
-      <App />
-    </ModalProvider>
+    <PageProvider>
+      <ModalProvider>
+        <App />
+      </ModalProvider>
+    </PageProvider>
   </React.StrictMode>
 );
 

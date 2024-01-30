@@ -1,4 +1,7 @@
 import { useState, useEffect } from 'react'
+import { useModal } from '../context/ModalContext';
+import { usePage } from '../context/PageContext';
+import DropDownMenu from './DropDownMenu/DropDown';
 import moment from 'moment-timezone';
 import NameImg from '../images/name.png'
 
@@ -16,7 +19,20 @@ import './SplashStyle.scss'
 
 export default function MainPage() {
 
+    const { background } = usePage()
+    const { closeModal } = useModal()
+
     const [name, setName] = useState(NameImg)
+
+
+    const modalNameArr = [
+        'resumeId',
+        'aboutMeId',
+        'soundlogId',
+        'aiId',
+        'discordId',
+        'ardianBnBId'
+    ];
 
     const nameArr = [name1, name2, name3, name4, name5, name6, name7, name8, name9, NameImg];
 
@@ -59,19 +75,48 @@ export default function MainPage() {
     return (
         <>
             <div className='topBar'>
-                <button
-                    className='cycle-btn'
-                    onClick={clickHandler}
+                <div
+                    style={{
+                        display: 'flex'
+                    }}
                 >
-                    Ardian Kovanxhi
-                </button>
+
+                    <button
+                        className='cycle-btn'
+                        onClick={clickHandler}
+                    >
+                        Ardian Kovanxhi
+                    </button>
+
+                    <DropDownMenu />
+
+                </div>
 
                 {/* <div>{'Wlcome to my retro site :]'}</div> */}
-                <div className='clock'>
-                    {currentTime.format('HH:mm')}
+                <div
+                    style={{
+                        display: 'flex'
+                    }}
+                >
+
+                    <button
+                        className='clear-btn'
+                        onClick={() => modalNameArr.forEach(el => closeModal(el))}
+                    >
+                        Clear
+                    </button>
+
+                    <div className='clock'>
+                        {currentTime.format('HH:mm')}
+                    </div>
                 </div>
             </div>
-            <div className='splash-div'>
+            <div
+                className='splash-div'
+                style={{
+                    backgroundImage: `url(${background})`
+                }}
+            >
                 <img
                     className='name-img'
                     src={name}
@@ -92,7 +137,7 @@ export default function MainPage() {
                         TheStrokes.com
                     </a>
                 </div>
-            </div>
+            </div >
         </>
     )
 }

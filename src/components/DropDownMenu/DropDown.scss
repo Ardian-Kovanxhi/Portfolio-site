@@ -1,0 +1,53 @@
+@import '../style_imports/fonts';
+
+.drop-down-container {
+    background-color: white;
+    color: black;
+
+}
+
+
+
+.option-container {
+    // background-color: black;
+    position: absolute;
+    top: 38px;
+    z-index: 100;
+    // height: 205px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // opacity: 0;
+    opacity: 1;
+    transition: opacity .5s;
+
+    font-family: var(--main-font);
+
+    &>div {
+        // background-color: white;
+        background-color: rgb(204, 204, 204);
+
+        border-top: 1px white solid;
+        border-right: 1px black solid;
+        border-bottom: 1px black solid;
+        border-left: 1px white solid;
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgb(190, 190, 190);
+        }
+
+        &:active {
+            background-color: rgb(150, 150, 150);
+
+            border-top: 1px black solid;
+            border-right: 1px white solid;
+            border-bottom: 1px white solid;
+            border-left: 1px black solid;
+        }
+    }
+
+    &.invisible {
+        display: none;
+    }
+}
