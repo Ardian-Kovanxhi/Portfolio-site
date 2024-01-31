@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import MainPage from './components/Splash';
 import { useModal } from './context/ModalContext';
 import { usePage } from './context/PageContext';
-// import Clock from './components/clock/Clock';
 
 import AppIcon from './components/Icons/Icon';
 import logImg from './images/log.png'
@@ -11,50 +10,90 @@ import houseImg from './images/house.webp'
 import robotImg from './images/robot.png'
 import textImg from './images/textFile.png'
 import linkedinImg from './images/linkedin.png'
-import githubImg from './images/github.png'
-import githubTest from './images/github-white.png'
+// import githubImg from './images/github.png'
+import githubImg from './images/github-white.png'
 import emailImg from './images/email.png'
-import ModularModal from './components/MoveableModal/ModularModal';
+import sweeper from './images/sweeper.webp'
 
+
+import ModularModal from './components/MoveableModal/ModularModal';
 import Resume from './components/ModalComponents/Resume';
 import AboutMe from './components/ModalComponents/AboutMe';
 import AiChatbot from './components/ModalComponents/AIChatbot';
 import ArdianBnB from './components/ModalComponents/ArdianBnB';
 import Discordance from './components/ModalComponents/Discordance';
 import Soundlog from './components/ModalComponents/Soundlog';
+import BoringVersion from './components/Professional/MainPage';
 
 
 function App() {
 
   const { openModal, focus, setFocus } = useModal()
 
-  const { page, background } = usePage()
-
-  const testObj = {
-    windowsXp: { color: 'black' },
-    matrix: {},
-    boat: {},
-    chilling: {},
-    link: {},
-    scarecrow: {},
-    ghibliGif: {},
-    sunset: {},
-    totoro: {},
-    berserkGif: {},
-  }
+  const { page, wipeWidth, wipeHeight, vis } = usePage()
 
   const openEmailApp = () => {
     window.location.href = 'mailto:akovanxhi@gmail.com';
   };
 
-  // const [focus, setFocus] = useState(null)
+  //Konami code easter egg
 
+  const [konamiCode, setKonamiCode] = useState([]);
+  const konamiSequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+
+  const handleKeyDown = (event) => {
+    setKonamiCode((prevCode) => [...prevCode, event.key]);
+  };
+
+  useEffect(() => {
+    if (konamiCode.join('') === konamiSequence.join('')) {
+      // Konami code entered, trigger your action here
+      window.open('https://youtu.be/gC8fwU-R7ko', '_blank')
+      // Add your action here, such as displaying a hidden feature, etc.
+      setKonamiCode([]); // Reset the code for future inputs
+    }
+  }, [konamiCode, konamiSequence]);
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [konamiCode]);
+
+  //Konami end
 
 
   return (
     <>
+      <div
+        className='resize-box'
+        style={{ width: wipeWidth, height: wipeHeight }}
+      >
+        {vis ?
+          <div>
+
+            <img
+              style={{
+                height: wipeHeight,
+                maxHeight: '312px',
+                width: wipeWidth,
+                maxWidth: '312px'
+              }}
+              src={sweeper}
+              alt=''
+            />
+            <div>
+              We'll Be Right Back
+            </div>
+          </div>
+          :
+          ''
+        }
+      </div>
       {page ?
-        <>
+        <div>
           <div onMouseDown={() => setFocus('resumeId')}>
             <ModularModal
               modalComponent={<Resume />}
@@ -246,7 +285,7 @@ function App() {
               <AppIcon
                 name={'GitHub'}
                 // iconImage={githubImg}
-                iconImage={githubTest}
+                iconImage={githubImg}
                 style={{
                   position: 'absolute',
                   top: '60vh',
@@ -266,9 +305,9 @@ function App() {
               />
             </div>
           </div>
-        </>
+        </div>
         :
-        <></>
+        <BoringVersion />
       }
     </>
   );

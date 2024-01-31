@@ -1,0 +1,111 @@
+@import '../style_imports/fonts';
+
+.slider-box {
+    width: 90px;
+    height: 28px;
+    background-color: rgb(150, 150, 150);
+    margin-right: 10px;
+
+    display: flex;
+    justify-content: space-between;
+
+    border-top: 1px black solid;
+    border-right: 1px white solid;
+    border-bottom: 1px white solid;
+    border-left: 1px black solid;
+
+    & *:hover {
+        cursor: pointer;
+    }
+}
+
+.toggle-name {
+    width: 45px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--main-font);
+    font-size: medium;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.slider-toggle {
+    height: 24px;
+    width: 43px;
+    padding: 1px 0px;
+    background-color: #CCCCCC;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    border-top: 1px white solid;
+    border-right: 1px black solid;
+    border-bottom: 1px black solid;
+    border-left: 1px white solid;
+
+    position: absolute;
+}
+
+.burger-stack {
+    width: 20px;
+    height: 4px;
+
+    background-color: rgb(150, 150, 150);
+
+    border-top: 1px white solid;
+    border-right: 1px black solid;
+    border-bottom: 1px black solid;
+    border-left: 1px white solid;
+}
+
+/* PRO STYLING */
+
+.slider-box-pro {
+    width: 90px;
+    height: 40px;
+    margin-top: 5px;
+    margin-left: 5px;
+
+    display: flex;
+    justify-content: space-between;
+
+    border-radius: 30px;
+    transition: background-color .1s;
+
+    & *:hover {
+        cursor: pointer;
+    }
+}
+
+.toggle-name-pro {
+    width: 45px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: medium;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.slider-toggle-pro {
+    position: absolute;
+    background-color: #CCCCCC;
+
+    width: 40px;
+    height: 32px;
+    border-radius: 30px;
+    transition: margin-left ease-in .1s;
+    margin-top: 4px;
+}

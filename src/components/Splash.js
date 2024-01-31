@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import { useModal } from '../context/ModalContext';
 import { usePage } from '../context/PageContext';
 import DropDownMenu from './DropDownMenu/DropDown';
 import moment from 'moment-timezone';
@@ -16,23 +15,13 @@ import name8 from '../images/nameLoop/nameLoop8.png'
 import name9 from '../images/nameLoop/nameLoop9.png'
 
 import './SplashStyle.scss'
+import Slider from './Slider/Slider';
 
 export default function MainPage() {
 
     const { background } = usePage()
-    const { closeModal } = useModal()
 
     const [name, setName] = useState(NameImg)
-
-
-    const modalNameArr = [
-        'resumeId',
-        'aboutMeId',
-        'soundlogId',
-        'aiId',
-        'discordId',
-        'ardianBnBId'
-    ];
 
     const nameArr = [name1, name2, name3, name4, name5, name6, name7, name8, name9, NameImg];
 
@@ -93,18 +82,13 @@ export default function MainPage() {
                 </div>
 
                 {/* <div>{'Wlcome to my retro site :]'}</div> */}
+                <Slider />
                 <div
                     style={{
                         display: 'flex'
                     }}
                 >
 
-                    <button
-                        className='clear-btn'
-                        onClick={() => modalNameArr.forEach(el => closeModal(el))}
-                    >
-                        Clear
-                    </button>
 
                     <div className='clock'>
                         {currentTime.format('HH:mm')}

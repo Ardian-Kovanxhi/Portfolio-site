@@ -66,7 +66,7 @@ export default function DropDownMenu() {
                         setShowMenu(false)
                     }}
                 >
-                    Boat
+                    Marnie
                 </div>
 
                 <div
