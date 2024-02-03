@@ -67,6 +67,14 @@ function App() {
 
   return (
     <>
+      <style>
+        {`
+        // only for overflow due to unique behavior between the 2 sites
+        body {
+          overflow: ${page ? 'hidden' : 'auto'}
+        }
+        `}
+      </style>
       <div
         className='resize-box'
         style={{ width: wipeWidth, height: wipeHeight }}
