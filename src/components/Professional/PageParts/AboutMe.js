@@ -7,7 +7,7 @@ export default function BoringAboutMe() {
                 justifyContent: 'center'
             }}
         >
-            ABOUT ME HERE
+            Hello, this section is still under development :)
         </div>
     )
 }

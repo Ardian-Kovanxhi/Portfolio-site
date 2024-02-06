@@ -32,9 +32,16 @@ export default function MovableModal({ header, onClose, children, position, focu
         };
     }, []);
 
+    // const nameObj = {
+    //     'Resume.txt': 'resumeId',
+    //     'About me.txt': 'aboutMeId',
+    //     'Soundlog': 'soundlogId',
+    //     'AI Chatbot': 'aiId',
+    //     'Discordance': 'discordId',
+    //     'ArdianBnB': 'ardianBnBId'
+    // };
     const nameObj = {
         'Resume.txt': 'resumeId',
-        'About me.txt': 'aboutMeId',
         'Soundlog': 'soundlogId',
         'AI Chatbot': 'aiId',
         'Discordance': 'discordId',
