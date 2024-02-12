@@ -69,7 +69,6 @@ function App() {
     <>
       <style>
         {`
-        // only for overflow due to unique behavior between the 2 sites
         body {
           overflow: ${page ? 'hidden' : 'auto'}
         }
