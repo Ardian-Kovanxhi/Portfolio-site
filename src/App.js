@@ -4,15 +4,15 @@ import { useModal } from './context/ModalContext';
 import { usePage } from './context/PageContext';
 
 import AppIcon from './components/Icons/Icon';
-import logImg from './images/log.png'
-import discordImg from './images/discord.png'
-import houseImg from './images/house.webp'
-import robotImg from './images/robot.png'
-import textImg from './images/textFile.png'
-import linkedinImg from './images/linkedin.png'
-// import githubImg from './images/github.png'
-import githubImg from './images/github-white.png'
-import emailImg from './images/email.png'
+import logImg from './images/icons/log.png'
+import discordImg from './images/icons/discord.png'
+import houseImg from './images/icons/house.webp'
+import robotImg from './images/icons/robot.png'
+import textImg from './images/icons/textFile.png'
+import linkedinImg from './images/icons/linkedin.png'
+import githubImg from './images/icons/github.png'
+import emailImg from './images/icons/email.png'
+
 import sweeper from './images/sweeper.webp'
 
 

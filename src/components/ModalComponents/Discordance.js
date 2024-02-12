@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import room from '../../images/gamer_room.png'
-import arrow from '../../images/cropped_arrow.png'
-import hoveredArrow from '../../images/pointing_arrow.png'
+import room from '../../images/modals/backgrounds/gamer_room.png'
+import arrow from '../../images/modals/icons/cropped_arrow.png'
+import hoveredArrow from '../../images/modals/icons/pointing_arrow.png'
 
 export default function Discordance() {
 

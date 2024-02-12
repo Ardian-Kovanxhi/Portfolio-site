@@ -1,8 +1,7 @@
-import forestImg from '../../images/small-forest.jpg'
-import arrowHovered from '../../images/pointing_arrow.png'
-import arrow from '../../images/cropped_arrow.png'
 import { useState } from 'react'
-// import forestImg from '../../images/bright-clearing.png'
+import forestImg from '../../images/modals/backgrounds/small-forest.jpg'
+import arrowHovered from '../../images/modals/icons/pointing_arrow.png'
+import arrow from '../../images/modals/icons/cropped_arrow.png'
 import './Components.scss'
 
 export default function Soundlog() {

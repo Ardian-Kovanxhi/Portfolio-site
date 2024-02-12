@@ -1,5 +1,5 @@
-import caution from '../../images/caution.avif'
-import consbar from '../../images/consbar.gif'
+import caution from '../../images/modals/backgrounds/caution.avif'
+import consbar from '../../images/modals/consbar.gif'
 
 export default function AiChatbot() {
     return (

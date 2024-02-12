@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import door1 from '../../images/doorLoop/door_loop_1.png'
-import door2 from '../../images/doorLoop/door_loop_2.png'
+import door1 from '../../images/modals/BnB/door_loop_1.png'
+import door2 from '../../images/modals/BnB/door_loop_2.png'
 
-import walkway from '../../images/doorLoop/walkway.jpg'
-import wall from '../../images/doorLoop/wall.jpg'
+import walkway from '../../images/modals/BnB/walkway.jpg'
+import wall from '../../images/modals/BnB/wall.jpg'
 
 export default function ArdianBnB() {
 

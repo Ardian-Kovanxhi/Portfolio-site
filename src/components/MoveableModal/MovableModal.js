@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Draggable from 'react-draggable';
-import closeBtn from '../../images/defaultClose.png'
-import closeBtnHover from '../../images/hoverClose.png'
+import closeBtn from '../../images/modals/icons/defaultClose.png'
+import closeBtnHover from '../../images/modals/icons/hoverClose.png'
 import { useModal } from '../../context/ModalContext';
 import './MovableModal.scss';
 
