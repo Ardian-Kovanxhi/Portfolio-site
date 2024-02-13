@@ -20,7 +20,9 @@
 
 .middle-block {
     width: 1000px;
-    height: 100vh;
+    // height: 100vh;
+    height: fit-content;
+    // height: 5000px;
     padding-top: 50px;
     background-color: rgba($color: #FFFFFF, $alpha: .65);
     display: flex;

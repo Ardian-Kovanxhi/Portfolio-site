@@ -1,0 +1,31 @@
+.about-me-container {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px rgba($color: #000000, $alpha: .2) solid;
+
+    @media screen and (max-width: 1000px) {
+        flex-direction: column-reverse;
+        margin-top: 150px;
+
+        &>.profile-pic {
+            margin-right: 0px;
+        }
+    }
+}
+
+.profile-pic {
+    height: 360px;
+    width: 360px;
+    border-radius: 100%;
+    border: 1px rgba($color: #000000, $alpha: .3) solid;
+    padding: 5px;
+    margin-right: 50px;
+
+    @media screen and (max-width: 500px) {
+        width: 200px;
+        height: 200px;
+    }
+}

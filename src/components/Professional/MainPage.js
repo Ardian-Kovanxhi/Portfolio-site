@@ -10,7 +10,7 @@ export default function BoringVersion() {
             <div className='middle-block'>
                 <BoringTopBar />
                 <BoringAboutMe />
-                {/* <BoringProjects /> */}
+                <BoringProjects />
             </div>
         </div>
     )
