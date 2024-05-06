@@ -12,10 +12,10 @@
     justify-content: center;
 
     background:
-        linear-gradient(45deg, blue, transparent 50%),
-        linear-gradient(135deg, rgb(255, 0, 255), transparent 50%),
-        linear-gradient(225deg, blue, transparent 50%),
-        linear-gradient(315deg, rgb(255, 0, 255), transparent 50%);
+        linear-gradient(30deg, rgb(0, 100, 255), rgb(0, 255, 180), rgb(0, 100, 255)),
+        // linear-gradient(135deg, rgb(0, 255, 100), transparent 50%),
+        // linear-gradient(225deg, rgb(0, 100, 255), transparent 50%),
+        // linear-gradient(315deg, rgb(0, 255, 100), transparent 50%);
 }
 
 .middle-block {

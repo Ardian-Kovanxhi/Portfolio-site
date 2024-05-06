@@ -3,9 +3,9 @@ import Draggable from 'react-draggable';
 import closeBtn from '../../images/modals/icons/defaultClose.png'
 import closeBtnHover from '../../images/modals/icons/hoverClose.png'
 import { useModal } from '../../context/ModalContext';
-import './MovableModal.scss';
+import './MoveableModal.scss';
 
-export default function MovableModal({ header, onClose, children, position, focus }) {
+export default function MoveableModal({ header, onClose, children, position, focus }) {
 
     const [hovered, setHovered] = useState(false)
 
@@ -52,7 +52,7 @@ export default function MovableModal({ header, onClose, children, position, focu
         <>
             {
                 isSmallScreen ?
-                    <div className="movable-modal">
+                    <div className="moveable-modal">
                         <div className="modal-header">
                             <div className='title-x-div'>
                                 <div className='title-bar' >
@@ -99,7 +99,7 @@ export default function MovableModal({ header, onClose, children, position, focu
                     :
                     <Draggable handle=".modal-header" >
                         <div
-                            className="movable-modal"
+                            className="moveable-modal"
                             style={focus ? { ...position, zIndex: 1001 } : { ...position, zIndex: 1000 }}
                         // style={position}
                         >

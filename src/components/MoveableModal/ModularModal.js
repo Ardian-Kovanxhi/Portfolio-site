@@ -1,6 +1,7 @@
 import { useModal } from "../../context/ModalContext"
-import MovableModal from "./MovableModal"
-import './MovableModal.scss'
+import MoveableApp from "./MoveableApp";
+import MoveableModal from "./MoveableModal"
+import './MoveableModal.scss'
 
 export default function ModularModal({ modalComponent, modalHeader, modalId, position, focus }) {
 
@@ -14,14 +15,24 @@ export default function ModularModal({ modalComponent, modalHeader, modalId, pos
 
     return (
         <div className={`${modalOpen ? '' : 'invisible'}`}>
-            <MovableModal
-                header={modalHeader}
-                onClose={handleCloseModal}
-                position={position}
-                focus={focus === modalId}
-            >
-                {modalComponent}
-            </MovableModal>
+            {
+                modalId === "testId" ?
+                    <MoveableApp
+                        header={modalHeader}
+                        onClose={handleCloseModal}
+                        position={position}
+                        focus={focus === modalId}
+                    />
+                    :
+                    <MoveableModal
+                        header={modalHeader}
+                        onClose={handleCloseModal}
+                        position={position}
+                        focus={focus === modalId}
+                    >
+                        {modalComponent}
+                    </MoveableModal>
+            }
         </div>
     )
 }
