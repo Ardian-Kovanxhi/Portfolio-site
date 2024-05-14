@@ -1,14 +1,14 @@
+// ↓↓↓ About me
 .about-me-container {
     width: 100%;
-    height: 400px;
     display: flex;
-    justify-content: space-between;
+    height: 700px;
     align-items: center;
     border-bottom: 1px rgba($color: #000000, $alpha: .2) solid;
 
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1400px) {
         flex-direction: column-reverse;
-        margin-top: 150px;
+        margin-top: 250px;
 
         &>.profile-pic {
             margin-right: 0px;
@@ -16,11 +16,51 @@
     }
 }
 
+.about-me-text-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0px 90px;
+    font-size: 20pt;
+
+    &>h2 {
+        margin-top: 90px;
+        font-weight: 300;
+        width: fit-content;
+        font-size: 2em;
+        // font-size: 37px;
+        padding: 20px;
+        border-bottom: 1px rgba($color: #000000, $alpha: .5) solid;
+    }
+
+    &>button {
+        margin-bottom: 40px;
+        width: fit-content;
+        background-color: transparent;
+        border: 0;
+        color: #797979;
+        text-decoration: underline;
+        font-size: 15pt;
+
+        &:hover {
+            cursor: pointer;
+            color: black;
+        }
+    }
+
+    &>div {
+        font-size: 17pt;
+        line-height: 1.65;
+        margin-bottom: 90px;
+    }
+}
+
 .profile-pic {
     height: 360px;
     width: 360px;
     border-radius: 100%;
-    border: 1px rgba($color: #000000, $alpha: .3) solid;
+    border: 2px rgba($color: #000000, $alpha: .3) dotted;
     padding: 5px;
     margin-right: 50px;
 
@@ -28,4 +68,50 @@
         width: 200px;
         height: 200px;
     }
+}
+
+// ↑↑↑ ABOUT ME
+
+// ↓↓↓ PROJECTS ↓↓↓
+.proj-container {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px rgba($color: #000000, $alpha: .2) solid;
+
+    & img {
+        width: 200px;
+        height: 200px;
+        // border: 1px rgba($color: #000000, $alpha: .2) solid;
+        padding: 50px;
+    }
+}
+
+.proj-desc {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+
+    &>div {
+        border: 1px rgba($color: #000000, $alpha: .2) solid;
+        border-radius: 100%;
+    }
+}
+
+// ↑↑↑ PROJECTS ↑↑↑
+// ↓↓↓ SKILLS ↓↓↓
+.skills-container {
+    width: 100%;
+    height: 500px;
+    border-bottom: 1px rgba($color: #000000, $alpha: .2) solid;
+}
+
+// ↑↑↑ SKILLS ↑↑↑
+// ↓↓↓ Contacts ↓↓↓
+.contact-container {
+    width: 100%;
+    height: 1500px;
 }

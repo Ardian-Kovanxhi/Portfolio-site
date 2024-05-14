@@ -1,7 +1,9 @@
 import BoringTopBar from './TopBar/TopBar'
 import BoringAboutMe from './PageParts/AboutMe'
 import BoringProjects from './PageParts/Projects'
+import BoringSkills from './PageParts/Skills'
 import './MainPage.scss'
+import BoringContact from './PageParts/Contact'
 
 export default function BoringVersion() {
 
@@ -11,6 +13,8 @@ export default function BoringVersion() {
                 <BoringTopBar />
                 <BoringAboutMe />
                 <BoringProjects />
+                <BoringSkills />
+                <BoringContact />
             </div>
         </div>
     )

@@ -18,7 +18,7 @@ import sweeper from "./images/sweeper.webp"
 
 import ModularModal from "./components/MoveableModal/ModularModal";
 import Resume from "./components/ModalComponents/Resume";
-// import AboutMe from "./components/ModalComponents/AboutMe";
+import AboutMe from "./components/ModalComponents/AboutMe";
 import AiChatbot from "./components/ModalComponents/AIChatbot";
 import ArdianBnB from "./components/ModalComponents/ArdianBnB";
 import Discordance from "./components/ModalComponents/Discordance";
@@ -130,7 +130,7 @@ function App() {
           </div>
 
 
-          {/* <div onMouseDown={() => setFocus("aboutMeId")}>
+          <div onMouseDown={() => setFocus("aboutMeId")}>
             <ModularModal
               modalComponent={<AboutMe />}
               modalHeader={"About me.txt"}
@@ -139,7 +139,7 @@ function App() {
               focus={focus}
               setFocus={setFocus}
             />
-          </div> */}
+          </div>
 
 
           <div onMouseDown={() => setFocus("aiId")}>
@@ -278,7 +278,7 @@ function App() {
               />
             </div>
 
-            {/* <div
+            <div
               onClick={() => {
                 openModal("aboutMeId")
                 setFocus("aboutMeId")
@@ -293,7 +293,7 @@ function App() {
                   left: "5vw"
                 }}
               />
-            </div> */}
+            </div>
 
             <div onClick={() => window.open("https://www.linkedin.com/in/ardian-kovanxhi-341177145/", "_blank")}>
               <AppIcon

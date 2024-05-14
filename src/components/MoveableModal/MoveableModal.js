@@ -32,21 +32,21 @@ export default function MoveableModal({ header, onClose, children, position, foc
         };
     }, []);
 
-    // const nameObj = {
-    //     'Resume.txt': 'resumeId',
-    //     'About me.txt': 'aboutMeId',
-    //     'Soundlog': 'soundlogId',
-    //     'AI Chatbot': 'aiId',
-    //     'Discordance': 'discordId',
-    //     'ArdianBnB': 'ardianBnBId'
-    // };
     const nameObj = {
         'Resume.txt': 'resumeId',
+        'About me.txt': 'aboutMeId',
         'Soundlog': 'soundlogId',
         'AI Chatbot': 'aiId',
         'Discordance': 'discordId',
         'ArdianBnB': 'ardianBnBId'
     };
+    // const nameObj = {
+    //     'Resume.txt': 'resumeId',
+    //     'Soundlog': 'soundlogId',
+    //     'AI Chatbot': 'aiId',
+    //     'Discordance': 'discordId',
+    //     'ArdianBnB': 'ardianBnBId'
+    // };
 
     return (
         <>

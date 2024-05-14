@@ -69,13 +69,13 @@
 .slider-box-pro {
     width: 90px;
     height: 40px;
-    margin-top: 5px;
-    margin-left: 5px;
 
     display: flex;
     justify-content: space-between;
 
     border-radius: 30px;
+    border: 2px rgba($color: #000000, $alpha: .2) solid;
+    // box-shadow: 0 0 1px black;
     transition: background-color .1s;
 
     & *:hover {
@@ -102,7 +102,8 @@
 .slider-toggle-pro {
     position: absolute;
     background-color: #CCCCCC;
-
+    // border: 1px rgba($color: #000000, $alpha: .4) solid;
+    box-shadow: 0 0 2px black;
     width: 40px;
     height: 32px;
     border-radius: 30px;

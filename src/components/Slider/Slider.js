@@ -6,7 +6,7 @@ export default function Slider() {
 
     const {
         page, setPage,
-        wipeWidth, setWipeWidth,
+        wipeWidth, WipeHeight, setWipeWidth,
         setWipeHeight, setVis
     } = usePage();
 
@@ -17,7 +17,8 @@ export default function Slider() {
         setSlide(slide ? false : true)
         if (wipeWidth === '100%') {
             setWipeHeight('100%')
-            setTimeout(() => { setPage(false) }, 1000)
+            // setTimeout(() => { setPage(false) }, 1000)
+            setTimeout(() => { setPage(true) }, 1000)
             setTimeout(() => {
                 setVis(false)
                 setWipeWidth('0%');
@@ -25,7 +26,8 @@ export default function Slider() {
         }
         else {
             setWipeWidth('100%')
-            setTimeout(() => { setPage(true) }, 1000)
+            // setTimeout(() => { setPage(true) }, 1000)
+            setTimeout(() => { setPage(false) }, 1000)
             setTimeout(() => {
                 setVis(false)
                 setWipeHeight('0%');

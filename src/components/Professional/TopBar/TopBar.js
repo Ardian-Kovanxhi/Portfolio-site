@@ -1,6 +1,5 @@
-import Slider from '../../Slider/Slider';
-import file from '../../../download files/Ardian-Kovanxhi-Resume.pdf'
-import './TopBar.scss';
+import Slider from "../../Slider/Slider";
+import "./TopBar.scss";
 
 export default function BoringTopBar() {
 
@@ -9,19 +8,32 @@ export default function BoringTopBar() {
         <div
             className="topbar-container"
         >
+            <h2 style={{ fontWeight: 600 }}>
+                Ardian Kovanxhi
+            </h2>
+            <div className="topbar-btns">
+                <button
+                    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                >
+                    About Me
+                </button>
+                <button
+                    onClick={() => window.scrollTo({ top: 690, behavior: "smooth" })}
+                >
+                    Projects
+                </button>
+                <button
+                    onClick={() => window.scrollTo({ top: 1390, behavior: "smooth" })}
+                >
+                    Skills
+                </button>
+                <button
+                    onClick={() => window.scrollTo({ top: 1890, behavior: "smooth" })}
+                >
+                    Contact
+                </button>
+            </div>
             <Slider />
-
-            <button
-                onClick={() => window.scrollTo({ top: 2000, behavior: 'smooth' })}
-            >
-                SCROLLER
-            </button>
-
-            <button
-                onClick={() => window.open(file, '_blank')}
-            >
-                DOWNLOAD
-            </button>
         </div>
 
     )
