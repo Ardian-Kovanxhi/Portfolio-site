@@ -12,10 +12,13 @@
 
     background:
         // linear-gradient(30deg, rgb(0, 100, 255), rgb(0, 255, 180), rgb(0, 100, 255));
-        linear-gradient(to right top,
-            rgb(0, 0, 136) 33%,
-            #FFD700,
-            rgb(0, 0, 136) 66%);
+        // linear-gradient(to right top,
+        //     rgb(0, 0, 136) 33%,
+        //     #FFD700,
+        //     rgb(0, 0, 136) 66%);
+        linear-gradient(to left bottom,
+            rgb(150, 150, 255),
+            rgb(180, 255, 180))
 }
 
 .middle-block {
@@ -24,7 +27,7 @@
     height: fit-content;
     // height: 5000px;
     padding-top: 50px;
-    background-color: rgba($color: #FFFFFF, $alpha: 1);
+    background-color: rgba($color: #FFFFFF, $alpha: .9);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -35,6 +38,6 @@
     }
 
     @media screen and (max-width: 1450px) {
-        width: 100%;
+        width: 95vw;
     }
 }

@@ -1,19 +1,20 @@
 .topbar-container {
     position: fixed;
     top: 0;
-    width: 1410px;
+    width: 1450px;
     // height: fit-content;
     height: 60px;
-    background-color: rgba(247, 247, 247, 0.95);
+    background-color: rgba(235, 235, 235, 0.95);
     border-radius: 0 0 10px 10px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 20px;
+    z-index: 10;
 
     @media screen and (max-width: 1450px) {
-        width: 100%;
+        width: 95vw;
+        // padding: 0;
     }
 }
 
@@ -33,6 +34,10 @@
         &:hover {
             cursor: pointer;
             background-color: rgba($color: #CCCCCC, $alpha: .3);
+        }
+
+        &:active {
+            background-color: #CCCCCC;
         }
     }
 }

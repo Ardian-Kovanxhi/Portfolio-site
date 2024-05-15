@@ -8,7 +8,7 @@ export default function BoringTopBar() {
         <div
             className="topbar-container"
         >
-            <h2 style={{ fontWeight: 600 }}>
+            <h2 style={{ fontWeight: 600, paddingLeft: "20px" }}>
                 Ardian Kovanxhi
             </h2>
             <div className="topbar-btns">
@@ -23,12 +23,12 @@ export default function BoringTopBar() {
                     Projects
                 </button>
                 <button
-                    onClick={() => window.scrollTo({ top: 1390, behavior: "smooth" })}
+                    onClick={() => window.scrollTo({ top: 1804, behavior: "smooth" })}
                 >
                     Skills
                 </button>
                 <button
-                    onClick={() => window.scrollTo({ top: 1890, behavior: "smooth" })}
+                    onClick={() => window.scrollTo({ top: 2305, behavior: "smooth" })}
                 >
                     Contact
                 </button>
