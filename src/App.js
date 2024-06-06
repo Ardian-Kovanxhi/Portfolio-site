@@ -33,10 +33,10 @@ function App() {
 
   const { page, wipeWidth, wipeHeight, vis } = usePage()
 
-  useEffect(() => { //Temp use Effect
-    openModal("testId")
-    setFocus("testId")
-  }, [])
+ // useEffect(() => { //Temp use Effect
+ //   openModal("testId")
+ //   setFocus("testId")
+ // }, [])
 
   const openEmailApp = () => {
     window.location.href = "mailto:akovanxhi@gmail.com";
