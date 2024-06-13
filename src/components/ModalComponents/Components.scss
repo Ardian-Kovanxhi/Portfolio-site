@@ -1,6 +1,10 @@
 @import '../style_imports/fonts';
 
 /* \/\/\/ GLOBAL \/\/\/ */
+.parent {
+    height: 65vh;
+    width: 100%;
+}
 
 .blurb-container {
     font-family: var(--main-font);
@@ -38,7 +42,6 @@
 /* \/\/\/ AI CHAT \/\/\/ */
 
 .constuction-container {
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,7 +89,6 @@
 /* \/\/\/ DISCORDANCE \/\/\/ */
 
 .disc-div {
-    height: 100%;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -113,4 +115,16 @@
 .resume-container,
 .about-me-container {
     font-family: var(--main-font);
+}
+
+.about-me-container {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    &.parent {
+        height: fit-content;
+    }
 }

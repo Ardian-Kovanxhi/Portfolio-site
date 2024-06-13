@@ -9,7 +9,7 @@ export default function Discordance() {
 
     return (
         <div
-            className='disc-div'
+            className='disc-div parent'
         >
             <img
                 style={{

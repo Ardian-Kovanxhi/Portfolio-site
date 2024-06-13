@@ -8,11 +8,11 @@ export default function Soundlog() {
     const [hover, setHover] = useState(false)
     return (
         <div
+            className='soudlog-container parent'
             style={{
                 display: 'flex',
                 justifyContent: 'center',
-                height: '100%',
-                overflow: 'hidden'
+                overflow: 'hidden',
             }}
         >
             <div className='forest blurb-container'>

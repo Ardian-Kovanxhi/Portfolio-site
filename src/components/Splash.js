@@ -82,7 +82,7 @@ export default function MainPage() {
                 </div>
 
                 {/* <div>{'Wlcome to my retro site :]'}</div> */}
-                <Slider />
+                {/* <Slider /> */}
                 <div
                     style={{
                         display: 'flex'

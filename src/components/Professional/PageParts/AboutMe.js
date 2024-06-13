@@ -4,7 +4,7 @@ import "./PageParts.scss"
 
 export default function BoringAboutMe() {
     return (
-        <div className="about-me-container">
+        <div className="about-me-container-prof">
 
             <div className="about-me-text-container">
                 <h2>

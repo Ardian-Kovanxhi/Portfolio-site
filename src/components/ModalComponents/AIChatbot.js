@@ -3,7 +3,7 @@ import consbar from '../../images/modals/consbar.gif'
 
 export default function AiChatbot() {
     return (
-        <div className='constuction-container'>
+        <div className='constuction-container parent'>
             <img
                 src={caution}
                 style={{

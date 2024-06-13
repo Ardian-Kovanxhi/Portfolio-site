@@ -1,7 +1,7 @@
 export default function Resume() {
     return (
         <div
-            className="resume-container"
+            className="resume-container parent"
             style={{ display: 'flex', flexDirection: 'column' }}
         >
 
