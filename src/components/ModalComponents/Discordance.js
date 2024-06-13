@@ -61,6 +61,7 @@ export default function Discordance() {
                 <div>
                     Inspired by Discord, Discordance is a chat app developed by myself along with 3 other developers where you can  chat with you friends both directly and in group chats
                 </div>
+                <div>Live from 6am - 6pm</div>
                 <div style={{ marginBottom: '5px' }}>
                     (Python, JavaScript, Flask, SQLAlchemy, SQLite, Postgres, React.js, Redux, CSS, HTML5, Socket.io)
                 </div>

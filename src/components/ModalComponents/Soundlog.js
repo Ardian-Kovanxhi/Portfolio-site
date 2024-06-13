@@ -19,6 +19,7 @@ export default function Soundlog() {
                 <div>
                     Inspired by Soundcloud, Soundlog is a music playing website with functionality in mind where users can play, upload, like, and comment on their favorite songs
                 </div>
+                <div>Live from 6am - 6pm</div>
                 <div style={{ marginBottom: '5px' }}>
                     (Javascript, Express.js, Sequelize, SQLite, Postgres, React.js, Redux, CSS, HTML5, AWS S3)
                 </div>
