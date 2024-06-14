@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import forestImg from '../../images/modals/backgrounds/small-forest.jpg'
 import arrowHovered from '../../images/modals/icons/pointing_arrow.png'
 import arrow from '../../images/modals/icons/cropped_arrow.png'
@@ -15,15 +15,15 @@ export default function Soundlog() {
                 overflow: 'hidden',
             }}
         >
-            <div className='forest blurb-container'>
-                <div>
-                    Inspired by Soundcloud, Soundlog is a music playing website with functionality in mind where users can play, upload, like, and comment on their favorite songs
-                </div>
-                <div>Live from 6am - 6pm</div>
-                <div style={{ marginBottom: '5px' }}>
+            <span className='forest blurb-container'>
+                <p style={{ margin: "5px" }}>
+                    Inspired by Soundcloud, Soundlog is a music playing website with functionality in mind where users can play, upload, like, and comment on their favorite songs<br />
+                    <div style={{ display: "block", marginBottom: "10px" }} role='separator' />
+                    Live from 6am - 6pm<br />
+                    <div style={{ display: "block", marginBottom: "10px" }} role='separator' />
                     (Javascript, Express.js, Sequelize, SQLite, Postgres, React.js, Redux, CSS, HTML5, AWS S3)
-                </div>
-            </div>
+                </p>
+            </span>
             <img
                 src={forestImg}
                 style={{

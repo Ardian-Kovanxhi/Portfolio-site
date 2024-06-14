@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import door1 from '../../images/modals/BnB/door_loop_1.png'
 import door2 from '../../images/modals/BnB/door_loop_2.png'
 
@@ -31,15 +31,17 @@ export default function ArdianBnB() {
                 alt=''
             />
 
-            <div className='home blurb-container'>
-                <div>
+            <span className='home blurb-container'>
+                <p style={{ margin: "5px" }}>
                     Inspired by AirBnB, ArdianBnB is a renting site, where you can post your home or rent another one
-                </div>
-                <div>Live from 6am - 6pm</div>
-                <div style={{ marginBottom: '5px' }}>
+                    <br />
+                    <div style={{ display: "block", marginBottom: "10px" }} role='separator' />
+                    Live from 6am - 6pm
+                    <br />
+                    <div style={{ display: "block", marginBottom: "10px" }} role='separator' />
                     (Javascript, Express.js, Sequelize, SQLite, Postgres, React.js, Redux, CSS, HTML5)
-                </div>
-            </div>
+                </p>
+            </span>
 
             <div
                 style={{

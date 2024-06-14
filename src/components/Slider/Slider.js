@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import { usePage } from '../../context/PageContext'
 import './Slider.scss'
 
@@ -6,7 +6,8 @@ export default function Slider() {
 
     const {
         page, setPage,
-        wipeWidth, WipeHeight, setWipeWidth,
+        wipeWidth, setWipeWidth,
+        // WipeHeight, 
         setWipeHeight, setVis
     } = usePage();
 

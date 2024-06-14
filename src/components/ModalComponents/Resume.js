@@ -5,26 +5,21 @@ export default function Resume() {
             style={{ display: 'flex', flexDirection: 'column' }}
         >
 
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <div>
-                    Elmwood Park, NJ
-                </div>
-                <div>
-                    (201) 851-2283
-                </div>
-            </div>
+            <p style={{ margin: 0 }}>
+                Elmwood Park, NJ
+                <br />
+                (201) 851-2283
+            </p>
 
             <h2>
                 FULLSTACK PROJECTS__________________________________________________
             </h2>
 
 
-
-
             <div style={{ display: 'flex', justifyContent: 'space-between', width: 180 }}>
-                <div style={{ fontWeight: 'bold' }}>
+                <h6 style={{ fontWeight: 'bold', margin: 0 }}>
                     Soundlog
-                </div>
+                </h6>
                 <div>
                     <a href="https://ardian-kovanxhi-soundcloud.onrender.com" target="_blank" rel="noopener noreferrer">
                         live
@@ -35,19 +30,18 @@ export default function Resume() {
                     </a>
                 </div>
             </div>
-            <div style={{ marginBottom: '5px' }}>
+            <p style={{ margin: 0, marginBottom: '5px' }}>
                 (Javascript, Express.js, Sequelize, SQLite, Postgres, React.js, Redux, CSS, HTML5, AWS S3)
-            </div>
-            <div>
+                <br />
                 Inspired by Soundcloud, Soundlog is a music playing website with functionality in mind where users can play, upload, and comment on their favorite songs
-            </div>
+            </p>
             <ul>
                 <li>
                     Built a RESTful API in Express.js to increase site performance
                 </li>
 
                 <li>
-                    Implemented React Player and built a custom progress bar that communicate with each other through Redux’s global store for an improved user experience
+                    Implemented React Player and built a custom progress bar that communicate with each other through Redux's global store for an improved user experience
                 </li>
 
                 <li>
@@ -60,9 +54,9 @@ export default function Resume() {
 
 
             <div style={{ display: 'flex', justifyContent: 'space-between', width: 210 }}>
-                <div style={{ fontWeight: 'bold' }}>
+                <h6 style={{ fontWeight: 'bold', margin: 0 }}>
                     Discordance
-                </div>
+                </h6>
                 <div>
                     <a href="https://group-4-discord.onrender.com" target="_blank" rel="noopener noreferrer">
                         live
@@ -73,12 +67,11 @@ export default function Resume() {
                     </a>
                 </div>
             </div>
-            <div style={{ marginBottom: '5px' }}>
+            <p style={{ margin: 0, marginBottom: '5px' }}>
                 (Python, JavaScript, Flask, SQLAlchemy, SQLite, Postgres, React.js, Redux, CSS, HTML5, Socket.io)
-            </div>
-            <div>
+                <br />
                 Inspired by Discord, Discordance is a chat app developed by myself along with 3 other developers where you can  chat with you friends both directly and in group chats
-            </div>
+            </p>
             <ul>
                 <li>
                     Implemented Socket.io for bidirectional data flow to facilitate real-time chat

@@ -1,20 +1,20 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 import { usePage } from '../context/PageContext';
 import DropDownMenu from './DropDownMenu/DropDown';
 import moment from 'moment-timezone';
-import NameImg from '../images/name.png'
+import NameImg from '../images/name.png';
 
-import name1 from '../images/nameLoop/nameLoop1.png'
-import name2 from '../images/nameLoop/nameLoop2.png'
-import name3 from '../images/nameLoop/nameLoop3.png'
-import name4 from '../images/nameLoop/nameLoop4.png'
-import name5 from '../images/nameLoop/nameLoop5.png'
-import name6 from '../images/nameLoop/nameLoop6.png'
-import name7 from '../images/nameLoop/nameLoop7.png'
-import name8 from '../images/nameLoop/nameLoop8.png'
-import name9 from '../images/nameLoop/nameLoop9.png'
+import name1 from '../images/nameLoop/nameLoop1.png';
+import name2 from '../images/nameLoop/nameLoop2.png';
+import name3 from '../images/nameLoop/nameLoop3.png';
+import name4 from '../images/nameLoop/nameLoop4.png';
+import name5 from '../images/nameLoop/nameLoop5.png';
+import name6 from '../images/nameLoop/nameLoop6.png';
+import name7 from '../images/nameLoop/nameLoop7.png';
+import name8 from '../images/nameLoop/nameLoop8.png';
+import name9 from '../images/nameLoop/nameLoop9.png';
 
-import './SplashStyle.scss'
+import './SplashStyle.scss';
 import Slider from './Slider/Slider';
 
 export default function MainPage() {
@@ -81,8 +81,8 @@ export default function MainPage() {
 
                 </div>
 
-                {/* <div>{'Wlcome to my retro site :]'}</div> */}
-                {/* <Slider /> */}
+                {/* <pre style={{ margin: 0 }}>Welcome to my retro site :]</pre> */}
+                <Slider />
                 <div
                     style={{
                         display: 'flex'

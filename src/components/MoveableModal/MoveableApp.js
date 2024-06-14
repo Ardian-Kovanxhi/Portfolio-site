@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react'
 import Draggable from 'react-draggable';
 import closeBtn from '../../images/modals/icons/defaultClose.png'
 import closeBtnHover from '../../images/modals/icons/hoverClose.png'
-import { useModal } from '../../context/ModalContext';
+// import { useModal } from '../../context/ModalContext';
 import './LogApp.scss';
 
 export default function MoveableApp({ header, onClose, children, position, focus }) {
 
     const [hovered, setHovered] = useState(false)
 
-    const { openModal, closeModal, setFocus } = useModal()
+    // const { openModal, closeModal, setFocus } = useModal()
 
 
     // const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 430);

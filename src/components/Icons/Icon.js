@@ -1,4 +1,4 @@
-import { usePage } from '../../context/PageContext'
+// import { usePage } from '../../context/PageContext';
 import './Icon.scss'
 export default function AppIcon({ name, iconImage, style }) {
     return (

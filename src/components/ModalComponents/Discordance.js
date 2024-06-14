@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import room from '../../images/modals/backgrounds/gamer_room.png'
 import arrow from '../../images/modals/icons/cropped_arrow.png'
 import hoveredArrow from '../../images/modals/icons/pointing_arrow.png'
@@ -57,15 +57,17 @@ export default function Discordance() {
             </div>
 
 
-            <div className='disc blurb-container'>
-                <div>
+            <span className='disc blurb-container'>
+                <p style={{ margin: "5px" }}>
                     Inspired by Discord, Discordance is a chat app developed by myself along with 3 other developers where you can  chat with you friends both directly and in group chats
-                </div>
-                <div>Live from 6am - 6pm</div>
-                <div style={{ marginBottom: '5px' }}>
+                    <br />
+                    <div style={{ display: "block", marginBottom: "10px" }} role='separator' />
+                    Live from 6am - 6pm
+                    <br />
+                    <div style={{ display: "block", marginBottom: "10px" }} role='separator' />
                     (Python, JavaScript, Flask, SQLAlchemy, SQLite, Postgres, React.js, Redux, CSS, HTML5, Socket.io)
-                </div>
-            </div>
+                </p>
+            </span>
         </div>
     )
 }

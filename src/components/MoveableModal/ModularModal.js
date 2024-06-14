@@ -1,4 +1,4 @@
-import { useModal } from "../../context/ModalContext"
+import { useModal } from "../../context/ModalContext";
 import MoveableApp from "./MoveableApp";
 import MoveableModal from "./MoveableModal"
 import './MoveableModal.scss'
