@@ -3,6 +3,7 @@ import React, { createContext, useContext, useState } from 'react';
 const ModalContext = createContext();
 
 export const ModalProvider = ({ children }) => {
+    // const [modals, setModals] = useState(["testId"]);
     const [modals, setModals] = useState([]);
 
     const [focus, setFocus] = useState(null)

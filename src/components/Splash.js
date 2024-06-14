@@ -82,7 +82,7 @@ export default function MainPage() {
                 </div>
 
                 {/* <pre style={{ margin: 0 }}>Welcome to my retro site :]</pre> */}
-                <Slider />
+                {/* <Slider /> */}
                 <div
                     style={{
                         display: 'flex'
