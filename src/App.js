@@ -12,7 +12,7 @@ import textImg from "./images/icons/textFile.png"
 import linkedinImg from "./images/icons/linkedin.png"
 import githubImg from "./images/icons/github.png"
 import emailImg from "./images/icons/email.png"
-import bookImg from "./images/icons/169055086-pixel-art-of-a-book-isolated-file-removebg-preview.png"
+// import bookImg from "./images/icons/169055086-pixel-art-of-a-book-isolated-file-removebg-preview.png"
 
 import sweeper from "./images/sweeper.webp"
 

@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { usePage } from '../context/PageContext';
 import DropDownMenu from './DropDownMenu/DropDown';
-import moment from 'moment-timezone';
 import NameImg from '../images/name.png';
 
 import name1 from '../images/nameLoop/nameLoop1.png';
@@ -15,7 +14,8 @@ import name8 from '../images/nameLoop/nameLoop8.png';
 import name9 from '../images/nameLoop/nameLoop9.png';
 
 import './SplashStyle.scss';
-import Slider from './Slider/Slider';
+// import Slider from './Slider/Slider';
+import Clock from './ClockDropDown/Clock';
 
 export default function MainPage() {
 
@@ -33,17 +33,6 @@ export default function MainPage() {
             }, 120 * i);
         }
     }
-
-    const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    const [currentTime, setCurrentTime] = useState(moment.tz(new Date(), userTimeZone));
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentTime(moment.tz(new Date(), userTimeZone));
-        }, 1000);
-
-        return () => clearInterval(interval);
-    }, [userTimeZone]);
 
 
     useEffect(() => {
@@ -83,17 +72,7 @@ export default function MainPage() {
 
                 {/* <pre style={{ margin: 0 }}>Welcome to my retro site :]</pre> */}
                 {/* <Slider /> */}
-                <div
-                    style={{
-                        display: 'flex'
-                    }}
-                >
-
-
-                    <div className='clock'>
-                        {currentTime.format('HH:mm')}
-                    </div>
-                </div>
+                <Clock />
             </div>
             <div
                 className='splash-div'

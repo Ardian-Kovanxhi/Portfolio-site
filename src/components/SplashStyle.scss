@@ -41,21 +41,6 @@
     }
 }
 
-.clock {
-    margin-right: 5px;
-    padding: 2px 5px;
-    border-top: 1px white solid;
-    border-right: 1px black solid;
-    border-bottom: 1px black solid;
-    border-left: 1px white solid;
-    font-family: var(--clock-font);
-    font-size: medium;
-
-    & :hover {
-        cursor: default;
-    }
-}
-
 .clear-btn {
     margin-right: 5px;
 
