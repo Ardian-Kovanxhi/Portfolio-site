@@ -43,86 +43,86 @@ export default function DropDownMenu() {
                 className={`option-container${showMenu ? '' : ' invisible'}`}
             >
 
-                <div
+                <button
                     onClick={() => {
                         setBackground(windowsXp)
                         setShowMenu(false)
                     }}
                 >
                     Windows
-                </div>
+                </button>
 
-                <div
+                <button
                     onClick={() => {
                         setBackground(matrix)
                         setShowMenu(false)
                     }}
                 >
                     Matrix
-                </div>
+                </button>
 
-                <div
+                <button
                     onClick={() => {
                         setBackground(boat)
                         setShowMenu(false)
                     }}
                 >
                     Marnie
-                </div>
+                </button>
 
-                <div
+                <button
                     onClick={() => {
                         setBackground(chilling)
                         setShowMenu(false)
                     }}
                 >
                     Chilling
-                </div>
+                </button>
 
-                <div
+                <button
                     onClick={() => {
                         setBackground(link)
                         setShowMenu(false)
                     }}
                 >
                     Link
-                </div>
+                </button>
 
-                <div
+                <button
                     onClick={() => {
                         setBackground(ghibliGif)
                         setShowMenu(false)
                     }}
                 >
                     Ghibli Gif
-                </div>
+                </button>
 
-                <div
+                <button
                     onClick={() => {
                         setBackground(sunset)
                         setShowMenu(false)
                     }}
                 >
                     Sunset
-                </div>
+                </button>
 
-                <div
+                <button
                     onClick={() => {
                         setBackground(totoro)
                         setShowMenu(false)
                     }}
                 >
                     Totoro
-                </div>
+                </button>
 
-                <div
+                <button
                     onClick={() => {
                         setBackground(berserkGif)
                         setShowMenu(false)
                     }}
                 >
                     Berserk
-                </div>
+                </button>
 
             </div>
         </div>

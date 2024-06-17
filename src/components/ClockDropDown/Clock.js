@@ -39,15 +39,15 @@ export default function Clock() {
             </button>
             <span className={`clock-dropdown ${showMenu}`}>
                 <time>
-                    <img src={usImg} />
+                    <img src={usImg} alt="USA flag" />
                     {nyTime}
                 </time>
                 <time>
-                    <img src={albImg} />
+                    <img src={albImg} alt="Albanian flag" />
                     {kosTime}
                 </time>
                 <time>
-                    <img src={jpnImg} />
+                    <img src={jpnImg} alt="Japanese flag" />
                     {jpnTime}
                 </time>
             </span>

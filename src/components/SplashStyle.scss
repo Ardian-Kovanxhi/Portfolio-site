@@ -26,6 +26,8 @@
     border-bottom: 1px black solid;
     border-left: 1px white solid;
 
+    transition: background-color .1s, border .1s;
+
     font-family: var(--main-font);
 
     &:hover {

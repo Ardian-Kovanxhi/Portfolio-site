@@ -60,13 +60,7 @@ export default function ArdianBnB() {
                 />
 
                 <img
-                    style={{
-                        width: '50%',
-                        height: '55%',
-                        position: 'absolute',
-                        top: '18%',
-                        left: '22%'
-                    }}
+                    className="door-img"
                     alt=''
                     onMouseEnter={() => sethovered(true)}
                     onMouseLeave={() => sethovered(false)}
