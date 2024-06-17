@@ -23,6 +23,7 @@ export default function BoringAboutMe() {
             <img
                 className="profile-pic"
                 src={pfp}
+                alt=""
             />
         </div>
     )

@@ -16,6 +16,7 @@ export default function BoringContact() {
                     onClick={() => window.open("https://github.com/Ardian-Kovanxhi", "_blank")}
                 >
                     <img
+                        alt=""
                         src={gitPng}
                     />
                 </button>
@@ -23,6 +24,7 @@ export default function BoringContact() {
                     onClick={() => window.open("https://www.linkedin.com/in/ardian-kovanxhi-341177145/", "_blank")}
                 >
                     <img
+                        alt=""
                         src={linkedinPng}
                     />
                 </button>
@@ -30,6 +32,7 @@ export default function BoringContact() {
                     onClick={openEmailApp}
                 >
                     <img
+                        alt=""
                         src={gmailPng}
                     />
                 </button>
