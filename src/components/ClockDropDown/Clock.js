@@ -28,22 +28,29 @@ export default function Clock() {
         return () => clearInterval(interval);
     }, [userTimeZone]);
     return (
-        <div style={{ display: 'flex' }}>
-            <div className='clock'>
-                {currentTime}
-            </div>
-            <div className='clock'>
-                <img src={usImg} style={{ width: "52px", height: "30px" }} />
-                {nyTime}
-            </div>
-            <div className='clock'>
-                <img src={albImg} style={{ width: "52px", height: "30px" }} />
-                {kosTime}
-            </div>
-            <div className='clock'>
-                <img src={jpnImg} style={{ width: "52px", height: "30px" }} />
-                {jpnTime}
-            </div>
+        <div>
+            <button
+                className='clock'
+                onClick={() => setShowMenu(!showMenu)}
+            >
+                <time>
+                    {currentTime}
+                </time>
+            </button>
+            <span className={`clock-dropdown ${showMenu}`}>
+                <time>
+                    <img src={usImg} />
+                    {nyTime}
+                </time>
+                <time>
+                    <img src={albImg} />
+                    {kosTime}
+                </time>
+                <time>
+                    <img src={jpnImg} />
+                    {jpnTime}
+                </time>
+            </span>
         </div>
     )
 }
