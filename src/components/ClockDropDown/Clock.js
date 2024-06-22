@@ -6,6 +6,7 @@ import "./Clock.scss";
 
 export default function Clock() {
 
+    // eslint-disable-next-line
     const options = { hour: "2-digit", minute: "2-digit", second: undefined, hour12: false }
 
     const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
@@ -26,7 +27,7 @@ export default function Clock() {
         }, 1000);
 
         return () => clearInterval(interval);
-    }, [userTimeZone]);
+    }, [userTimeZone, options]);
     return (
         <div>
             <button
