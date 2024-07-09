@@ -318,7 +318,7 @@ function App() {
 							/>
 						</div>
 
-						<div onClick={() => window.open("https://www.linkedin.com/in/ardian-kovanxhi-341177145/", "_blank")}>
+						<div onClick={() => window.open("https://www.linkedin.com/in/ardian-kovanxhi/", "_blank")}>
 							<AppIcon
 								name={"LinkedIn"}
 								iconImage={linkedinImg}
