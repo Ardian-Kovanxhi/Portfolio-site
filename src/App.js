@@ -27,6 +27,8 @@ import Soundlog from "./components/ModalComponents/Soundlog";
 import BoringVersion from "./components/Professional/MainPage";
 import MoveableApp from "./components/MoveableModal/MoveableApp";
 
+import NewDrag from "./components/NewDrag/Drag";
+
 
 function App() {
 
@@ -199,7 +201,9 @@ function App() {
 						{/* <Clock /> */}
 						<MainPage />
 
-						<div
+						<NewDrag />
+
+						{/* <div
 							onClick={() => {
 								openModal("soundlogId")
 								setFocus("soundlogId")
@@ -285,7 +289,7 @@ function App() {
 							/>
 						</div>
 
-						{/* <div
+						<div
 							onClick={() => {
 								openModal("testId")
 								setFocus("testId")
@@ -300,7 +304,7 @@ function App() {
 									left: "5vw"
 								}}
 							/>
-						</div> */}
+						</div>
 						<div
 							onClick={() => {
 								openModal("aboutMeId")
@@ -350,7 +354,7 @@ function App() {
 									left: "40vw"
 								}}
 							/>
-						</div>
+						</div> */}
 					</div>
 				</div>
 				:
