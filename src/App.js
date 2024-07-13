@@ -12,7 +12,7 @@ import textImg from "./images/icons/textFile.png"
 import linkedinImg from "./images/icons/linkedin.png"
 import githubImg from "./images/icons/github.png"
 import emailImg from "./images/icons/email.png"
-// import bookImg from "./images/icons/169055086-pixel-art-of-a-book-isolated-file-removebg-preview.png"
+import bookImg from "./images/icons/169055086-pixel-art-of-a-book-isolated-file-removebg-preview.png"
 
 import sweeper from "./images/sweeper.webp"
 
@@ -26,8 +26,6 @@ import Discordance from "./components/ModalComponents/Discordance";
 import Soundlog from "./components/ModalComponents/Soundlog";
 import BoringVersion from "./components/Professional/MainPage";
 import MoveableApp from "./components/MoveableModal/MoveableApp";
-
-import NewDrag from "./components/NewDrag/Drag";
 
 
 function App() {
@@ -201,9 +199,7 @@ function App() {
 						{/* <Clock /> */}
 						<MainPage />
 
-						<NewDrag />
-
-						{/* <div
+						<div
 							onClick={() => {
 								openModal("soundlogId")
 								setFocus("soundlogId")
@@ -354,7 +350,7 @@ function App() {
 									left: "40vw"
 								}}
 							/>
-						</div> */}
+						</div>
 					</div>
 				</div>
 				:
